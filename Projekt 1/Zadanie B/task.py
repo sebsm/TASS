@@ -17,4 +17,5 @@ open('4.txt', 'wb').write(r.content)
 ##### 1 #####
 # -   zbadaj jaki jest rząd i rozmiar całej sieci: pierwotnej oraz po usunięciu pętli i duplikatów krawędzi (1);
 
-G = nx.read_pajek('4.txt')
+#G = nx.MultiGraph()
+G = nx.read_edgelist("4.txt", create_using=nx.MultiGraph)
